@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1527770142235" clover="3.2.0">
+  <project timestamp="1527770142235" name="All files">
+    <metrics statements="39" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="24" coveredmethods="0" elements="69" coveredelements="0" complexity="0" loc="39" ncloc="39" packages="3" files="3" classes="3">
+      <package name="header">
+        <metrics statements="28" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="14" coveredmethods="0"/>
+        <file name="Header.vue" path="/Users/wangzhenjie/emfe/publicHeader/header/water/header/Header.vue">
+          <metrics statements="28" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="14" coveredmethods="0"/>
+          <line num="25" count="0" type="stmt"/>
+          <line num="26" count="0" type="stmt"/>
+          <line num="27" count="0" type="stmt"/>
+          <line num="28" count="0" type="stmt"/>
+          <line num="29" count="0" type="stmt"/>
+          <line num="31" count="0" type="stmt"/>
+          <line num="36" count="0" type="stmt"/>
+          <line num="67" count="0" type="stmt"/>
+          <line num="71" count="0" type="stmt"/>
+          <line num="74" count="0" type="stmt"/>
+          <line num="77" count="0" type="stmt"/>
+          <line num="80" count="0" type="stmt"/>
+          <line num="81" count="0" type="stmt"/>
+          <line num="84" count="0" type="stmt"/>
+          <line num="87" count="0" type="stmt"/>
+          <line num="88" count="0" type="stmt"/>
+          <line num="91" count="0" type="stmt"/>
+          <line num="94" count="0" type="stmt"/>
+          <line num="95" count="0" type="stmt"/>
+          <line num="98" count="0" type="stmt"/>
+          <line num="99" count="0" type="stmt"/>
+          <line num="102" count="0" type="stmt"/>
+          <line num="103" count="0" type="stmt"/>
+          <line num="106" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="107" count="0" type="stmt"/>
+          <line num="109" count="0" type="stmt"/>
+          <line num="110" count="0" type="stmt"/>
+          <line num="116" count="0" type="stmt"/>
+        </file>
+      </package>
+      <package name="header.component.mask">
+        <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <file name="mask.vue" path="/Users/wangzhenjie/emfe/publicHeader/header/water/header/component/mask/mask.vue">
+          <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
+          <line num="33" count="0" type="stmt"/>
+          <line num="41" count="0" type="stmt"/>
+          <line num="44" count="0" type="stmt"/>
+          <line num="47" count="0" type="stmt"/>
+        </file>
+      </package>
+      <package name="header.component.modal">
+        <metrics statements="7" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="6" coveredmethods="0"/>
+        <file name="modal.vue" path="/Users/wangzhenjie/emfe/publicHeader/header/water/header/component/modal/modal.vue">
+          <metrics statements="7" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="6" coveredmethods="0"/>
+          <line num="23" count="0" type="stmt"/>
+          <line num="66" count="0" type="cond" truecount="0" falsecount="4"/>
+          <line num="67" count="0" type="stmt"/>
+          <line num="72" count="0" type="stmt"/>
+          <line num="82" count="0" type="stmt"/>
+          <line num="85" count="0" type="stmt"/>
+          <line num="88" count="0" type="stmt"/>
+        </file>
+      </package>
+    </metrics>
+  </project>
+</coverage>

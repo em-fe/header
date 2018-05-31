@@ -1,0 +1,357 @@
+@import './config.scss';
+@import './mixin.scss';
+@import './reset.scss';
+
+.#{$prefix}header {
+  @include clearfix();
+  @include border(bottom);
+
+  height: $header-height;
+  background: $background-color-write;
+  z-index: 2;
+  position: fixed;
+  width: 100%;
+
+  &-eye {
+    padding: 16px 0 16px 20px;
+    float: left;
+
+    &-img {
+      cursor: pointer;
+    }
+  }
+
+  &-index {
+    float: right;
+    padding: 0 8px;
+    font-size: 14px;
+    line-height: $header-height;
+  }
+
+  &-controller {
+    float: left;
+    padding: 0 32px 0 20px;
+    font-size: 14px;
+    line-height: 56px;
+
+    &-text {
+      color: $thead-text-color;
+      position: relative;
+      font-size: 12px;
+      transform-origin: left center;
+      display: block;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: -10px;
+        top: 22px;
+        width: 1px;
+        height: 14px;
+        background: $button-color-default;
+      }
+    }
+  }
+
+  &-sidebar {
+    padding-left: 12px;
+    font-size: 16px;
+    color: $text-color;
+  }
+
+  &-info {
+    float: right;
+    padding: 0 32px;
+    font-size: 14px;
+    line-height: $header-height;
+    display: flex;
+
+    &-text {
+      cursor: pointer;
+      color: $title-color;
+      font-size: 12px;
+
+      &:hover {
+        color: $btn-hover-color;
+      }
+    }
+
+    &-text1 {
+      color: #fff;
+      cursor: pointer;
+      background-color: #1996f9;
+      border: 1px solid #1996f9;
+      line-height: 14px;
+      padding: 10px 24px;
+      border-radius: 3px;
+      text-align: center;
+      font-size: 14px;
+      box-sizing: border-box;
+      transition: color 0.1s linear, background-color 0.1s linear, border 0.1s linear;
+      display: inline-block;
+
+      &:hover {
+        border-color: #50affa;
+        background-color: #50affa;
+      }
+    }
+
+    &-hello {
+      color: $title-color;
+      margin: 0 10px 0 12px;
+      font-size: 12px;
+    }
+  }
+
+  &-account {
+    padding-right: 10px;
+  }
+
+  &-signout {
+    color: $text-color;
+  }
+
+  &-mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.3);
+
+    &-box {
+      width: 636px;
+      height: 418px;
+      background-color: #fff;
+      box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+      border-radius: 3px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate3d(-50%, -50%, 0);
+
+      &-close {
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
+
+      &-title {
+        margin-top: 52px;
+        font-size: 18px;
+        color: #333;
+        text-align: center;
+        line-height: 18px;
+      }
+
+      &-modal {
+        margin-top: 40px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        &-light {
+          float: left;
+          position: relative;
+          width: 239px;
+          height: 239px;
+          text-align: center;
+          background-color: #1996f9;
+          border-radius: 3px;
+          margin-right: 30px;
+          font-size: 0;
+          cursor: pointer;
+
+          &:last-child {
+            margin-right: 0;
+            background-color: #ffa430;
+
+            & .emfe-header-mask-box-modal-light-title {
+              margin-top: 20px;
+            }
+          }
+
+          &-img {
+            margin-top: 65px;
+            transition: all 0.35s ease-in-out;
+          }
+
+          &-title {
+            font-size: 16px;
+            color: #fff;
+            text-align: center;
+            margin-top: 12px;
+          }
+
+          &-content {
+            font-size: 12px;
+            color: #fff;
+            padding: 0 17px;
+            margin-top: 8px;
+            line-height: 18px;
+            text-align: center;
+          }
+
+          &-mask {
+            display: none;
+            transition: all 0.35s ease-in-out;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background-color: rgba(255, 255, 255, 0.2);
+          }
+
+          &:hover .emfe-header-mask-box-modal-light-mask {
+            display: block;
+          }
+
+          &:hover .emfe-header-mask-box-modal-light-img {
+            transform: translateY(-8px);
+          }
+        }
+      }
+    }
+  }
+
+  &-modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-mask {
+      position: fixed;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background: $mask-color;
+      z-index: 505;
+    }
+
+    &-wrap {
+      height: auto;
+      background: $background-color-write;
+      z-index: 1000;
+      position: relative;
+
+      @include box-shadow(y);
+    }
+
+    &-header {
+      @include border(bottom);
+
+      height: 40px;
+      background: $background-color-title;
+      position: relative;
+      font-size: 14px;
+
+      &-inner {
+        text-align: center;
+        color: $text-color-default;
+        line-height: 40px;
+        font-size: 14px;
+      }
+
+      &-close {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        right: 10px;
+        top: 6px;
+        color: $icon-color;
+        font-size: 28px;
+        text-align: center;
+        line-height: 20px;
+        transform: rotate(45deg);
+        cursor: pointer;
+      }
+    }
+
+    &-main {
+      padding: 16px 40px 40px;
+      color: $text-color-default;
+      font-size: 14px;
+
+      &-tip {
+        width: 100%;
+        color: $text-color-default;
+        font-size: 14px;
+        padding: 40px;
+        line-height: 1.5;
+        text-align: center;
+      }
+
+      &-prompt {
+        text-align: center;
+        margin-top: 24px;
+      }
+
+      &-input {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+
+        &-title {
+          font-size: 14px;
+          margin-right: 16px;
+        }
+      }
+    }
+
+    &-footer {
+      height: 32px;
+      width: 100%;
+      margin-bottom: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &-button {
+      margin-right: 16px;
+    }
+
+    &-cancle {
+      background: #fff;
+      color: #333;
+      border-color: #dcdcdc;
+      border: 1px solid #dbdbdb;
+      line-height: 14px;
+      padding: 10px 24px;
+      text-align: center;
+      border-radius: 3px;
+      font-size: 14px;
+      cursor: pointer;
+      box-sizing: border-box;
+      transition: color .1s linear,background-color .1s linear,border .1s linear;
+      display: inline-block;
+      margin-right: 16px;
+    }
+
+    &-ok {
+      border-color: #1996f9;
+      color: #fff;
+      background-color: #1996f9;
+      border: 1px solid #dbdbdb;
+      line-height: 14px;
+      padding: 10px 24px;
+      text-align: center;
+      border-radius: 3px;
+      font-size: 14px;
+      cursor: pointer;
+      box-sizing: border-box;
+      transition: color .1s linear,background-color .1s linear,border .1s linear;
+      display: inline-block;
+    }
+  }
+}
