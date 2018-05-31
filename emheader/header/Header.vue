@@ -22,13 +22,10 @@
   </header>
 </template>
 <script>
-import Vue from 'vue';
+import 'em-cookie';
 import WMask from './component/mask/index';
 import WModal from './component/modal/index';
 import CONSTANT from './common/constant';
-import VueCookie from 'em-cookie';
-
-Vue.use(VueCookie);
 
 export default {
   name: 'WHeader',
@@ -81,7 +78,7 @@ export default {
       this.goOut();
     },
     goOut() {
-      console.log("goOut");
+      console.log('goOut');
     },
     goIndex() {
       this.isMask = true;
