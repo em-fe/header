@@ -16,7 +16,6 @@
     "codecov": "codecov ./coverage/clover.xml"
   },
   "dependencies": {
-    "em-cookie": "^1.0.6",
     "babel-helpers": "^6.24.1",
     "babel-jest": "^22.4.3",
     "babel-plugin-dynamic-import-node": "^1.2.0",
@@ -27,6 +26,9 @@
     "cache-loader": "^1.2.2",
     "codecov": "^3.0.0",
     "cross-env": "^5.1.4",
+    "em-cookie": "^1.0.6",
+    "em-fe": "^2.1.0",
+    "em-jsonp": "^1.0.4",
     "em-normalize": "^1.0.2",
     "github-markdown-css": "^2.10.0",
     "gulp": "^3.9.1",

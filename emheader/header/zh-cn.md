@@ -7,7 +7,7 @@
 
 <br>
 <div class="header-box">
-  <w-header personalUrl="https://www.baidu.com" eventUrl="http://www.qq.com/" lightUrl="http://news.qq.com/"></w-header>
+  <w-header personalUrl="https://www.baidu.com" eventUrl="http://www.qq.com/" lightUrl="http://news.qq.com/" logoutAction="http://gateway.inner.evente.cn:8000/member/org/getLoginOutCallBackUrl" @success="logoutSuccess"></w-header>
 </div>
 
 ## 如何使用
@@ -24,6 +24,7 @@
 |---|----|---|-------|-----|
 |logo|主办logo|String|否|-|
 |showMask|展示弹窗还是 emit出方法|Boolean|否|default true|
+|logoutAction|退出登录接口地址|String|是|-|
 
 ## 方法
 
@@ -38,16 +39,19 @@
 |goAccount|点击用户名,阻止冒泡, 跳转到账户管理页面|-|
 |goEvente|点击弹窗的演唱赛事触发,阻止冒泡|-|
 |goLight|点击弹窗的演唱轻活动,,阻止冒泡|-|
+|success|退出登录成功|-|
 
 <script>
 import WHeader from './index';
 
 export default {
-  created() {
-    console.log(0);
-  },
   components: {
     WHeader,
+  },
+  methods: {
+    logoutSuccess() {
+      console.log('退出成功');
+    },
   },
 }
 </script>

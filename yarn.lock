@@ -3052,9 +3052,27 @@ em-cookie@^1.0.6:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/em-cookie/-/em-cookie-1.0.6.tgz#bbc77f85f83402b9452f728e04d8490d38c99c62"
 
+em-fe@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/em-fe/-/em-fe-2.1.0.tgz#9e9c2cd2d3df1460f674831d1d1b94a504382f66"
+  dependencies:
+    babel-plugin-dynamic-import-webpack "^1.0.1"
+    em-cookie "^1.0.6"
+    em-jsonp "^1.0.4"
+    em-underline "^1.0.10"
+    vue-template-compiler "2.3.4"
+
+em-jsonp@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/em-jsonp/-/em-jsonp-1.0.4.tgz#589d25b3079730e64faf225cf5336eae8aa72e0c"
+
 em-normalize@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/em-normalize/-/em-normalize-1.0.2.tgz#fc12f05697d1c747f78f6670a66b4fcb63968435"
+
+em-underline@^1.0.10:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/em-underline/-/em-underline-1.2.1.tgz#58bd65d4c59d1166fc85ae2d8f36290d1c0f6938"
 
 emojis-list@^2.0.0:
   version "2.1.0"
@@ -11061,6 +11079,13 @@ vue-style-loader@^4.0.1, vue-style-loader@^4.1.0:
   dependencies:
     hash-sum "^1.0.2"
     loader-utils "^1.0.2"
+
+vue-template-compiler@2.3.4:
+  version "2.3.4"
+  resolved "https://registry.yarnpkg.com/vue-template-compiler/-/vue-template-compiler-2.3.4.tgz#5a88ac2c5e4d5d6218e6aa80e7e221fb7e67894c"
+  dependencies:
+    de-indent "^1.0.2"
+    he "^1.1.0"
 
 vue-template-compiler@2.5.16, vue-template-compiler@^2.5.16:
   version "2.5.16"
