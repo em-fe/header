@@ -22,10 +22,16 @@
   </header>
 </template>
 <script>
+import vue from 'vue';
 import 'em-cookie';
+import jsonp from 'em-jsonp';
+import emfe from 'em-fe';
 import WMask from './component/mask/index';
 import WModal from './component/modal/index';
 import CONSTANT from './common/constant';
+import ajax from '../tools/ajax';
+
+vue.use(emfe);
 
 export default {
   name: 'WHeader',
@@ -34,6 +40,7 @@ export default {
       isMask: false,
       user: '',
       modalShow: false,
+      callbackUrl: [],
     };
   },
   props: {
@@ -47,17 +54,15 @@ export default {
       type: String,
       default: '',
     },
-    personalUrl: {
-      type: String,
-      required: true,
-    },
-    lightUrl: {
-      type: String,
-      required: true,
-    },
-    eventUrl: {
-      type: String,
-      required: true,
+    personalUrl: String,
+    lightUrl: String,
+    eventUrl: String,
+    logoutAction: String,
+    headers: {
+      type: Object,
+      default() {
+        return {};
+      },
     },
   },
   created() {
@@ -78,7 +83,26 @@ export default {
       this.goOut();
     },
     goOut() {
-      console.log('goOut');
+      ajax({
+        headers: this.headers,
+        type: 'GET',
+        action: this.logoutAction,
+        onSuccess: (res) => {
+          if (res.code === CONSTANT.SUCCESS) {
+            this.callbackUrl = res.data.url_list.slice();
+            this.afterLogout(this.callbackUrl.length - 1);
+          } else {
+            this.$EmfeMessage.error({
+              content: res.message,
+            });
+          }
+        },
+        onError: (err, response) => {
+          this.$EmfeMessage.error({
+            content: response.message,
+          });
+        },
+      });
     },
     goIndex() {
       this.isMask = true;
@@ -106,6 +130,38 @@ export default {
         window.open('https://www.evente.cn/');
         this.$emit('goHome');
       }
+    },
+    afterLogout(inow) {
+      let theIndex = inow;
+      window.$jsonp({
+        url: this.callbackUrl[theIndex],
+        success: (res) => {
+          if (res.code === CONSTANT.SUCCESS) {
+            if (theIndex === 0) {
+              this.logoutSuc();
+            } else {
+              this.afterLogout(--theIndex);
+            }
+          } else {
+            this.$EmfeMessage.error({
+              content: '登录失败',
+            });
+          }
+        },
+        error: () => {
+          this.$EmfeMessage.error({
+            content: '登录失败',
+          });
+        },
+      });
+    },
+    logoutSuc() {
+      window.$cookie.remove(CONSTANT.EVENT_TOKE);
+      window.$cookie.remove(CONSTANT.EVENT_USER);
+      // 不加定时器，登录cookie还在
+      setTimeout(() => {
+        this.$emit('success');
+      }, 0);
     },
   },
   computed: {
