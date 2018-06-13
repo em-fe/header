@@ -6,7 +6,9 @@
   "scripts": {
     "start": "vuepress dev emheader",
     "build:site": "export GH=1 && vuepress build emheader",
-    "build": "cross-env BABEL_ENV=production && node build/build.water.js && gulp --gulpfile build/gulpfile.js",
+    "build": "export BABEL_ENV=production && node build/build.water.js && gulp --gulpfile build/gulpfile.js",
+    "build:win:site": "cross-env GH=1 && vuepress build emheader",
+    "build:win": "cross-env BABEL_ENV=production && node build/build.water.js && gulp --gulpfile build/gulpfile.js",
     "eslint": "eslint --ext .js,.vue site emheader --fix",
     "stylelint": "stylelint site/**/*.scss emheader/**/*.scss",
     "lint": "npm run eslint && npm run stylelint",
@@ -26,7 +28,6 @@
     "codecov": "^3.0.0",
     "cross-env": "^5.1.4",
     "em-cookie": "^1.0.6",
-    "em-fe": "^2.1.0",
     "em-jsonp": "^1.0.4",
     "em-normalize": "^1.0.2",
     "github-markdown-css": "^2.10.0",
