@@ -25,13 +25,21 @@
 import vue from 'vue';
 import 'em-cookie';
 import jsonp from 'em-jsonp';
-import emfe from 'em-fe';
 import WMask from './component/mask/index';
 import WModal from './component/modal/index';
+import WMessage from './component/message/index';
 import CONSTANT from './common/constant';
 import ajax from '../tools/ajax';
 
-vue.use(emfe);
+if (!vue.prototype.$EmfeMessage) {
+  Object.defineProperties(vue.prototype, {
+    $EmfeMessage: {
+      get() {
+        return WMessage;
+      },
+    },
+  });
+}
 
 export default {
   name: 'WHeader',
@@ -59,7 +67,7 @@ export default {
       default: () => {},
     },
   },
-  created() {
+  mounted() {
     this.user = decodeURIComponent(window.$cookie.get(CONSTANT.EVENT_USER));
   },
   methods: {
