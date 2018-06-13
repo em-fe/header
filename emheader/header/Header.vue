@@ -11,7 +11,7 @@
         <span class="w-header-info-text1" @click="goIndex">免费发活动</span>
       </div>
       <div class="w-header-account">
-        <span class="w-header-info-hello">&nbsp;你好，<span class="w-header-info-text" @click="goAccount">{{ user }}</span></span>
+        <span class="w-header-info-hello">&nbsp;你好<span v-if="user && user !== 'null'">，</span><span class="w-header-info-text" @click="goAccount" v-if="user && user !== 'null'">{{ user }}</span></span>
       </div>
       <span class="w-header-info-text w-header-signout" @click="logout">退出</span>
     </div>
@@ -60,9 +60,7 @@ export default {
     logoutAction: String,
     headers: {
       type: Object,
-      default() {
-        return {};
-      },
+      default: () => {},
     },
   },
   created() {
