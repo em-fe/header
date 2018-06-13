@@ -3,6 +3,12 @@
   "version": "0.0.4",
   "description": "em B端公共头部业务组件",
   "author": "李梦龙 <649076408@qq.com>",
+  "main": "dist/emheader.js",
+  "unpkg": "dist/emheader.js",
+  "files": [
+    "dist",
+    "emheader"
+  ],
   "scripts": {
     "start": "vuepress dev emheader",
     "build:site": "export GH=1 && vuepress build emheader",
