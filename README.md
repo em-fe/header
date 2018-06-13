@@ -1,6 +1,12 @@
-# 组件库模板
+# 头部
 
->一套企业级的 UI 设计语言和 Vue.js 实现。
+>Vue.js 2.x 头部组件
+
+[![emheader](https://img.shields.io/npm/v/emheader.svg?style=flat-square)](https://www.npmjs.org/package/emheader)
+[![NPM downloads](http://img.shields.io/npm/dm/emheader.svg?style=flat-square)](https://npmjs.org/package/emheader)
+[![Package Quality](http://npm.packagequality.com/shield/emheader.svg)](http://packagequality.com/#?package=emheader)
+[![NPM downloads](https://img.shields.io/npm/dt/emheader.svg?style=flat-square)](https://npmjs.org/package/emheader)
+
 
 [![Sauce Labs Test Status (for master branch)](https://badges.herokuapp.com/browsers?googlechrome=7&firefox=7&microsoftedge=10&iexplore=9&safari=10.10)](https://saucelabs.com/u/_wmhilton)
 
