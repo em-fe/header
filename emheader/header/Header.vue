@@ -46,14 +46,10 @@ export default {
   props: {
     logo: {
       type: String,
-      default: 'https://static2.evente.cn/static/img/logo2017.svg',
+      default: 'https://static2.evente.cn/static/img/logo2018v1.svg',
     },
     className: String,
     home: Function,
-    personalAccount: {
-      type: String,
-      default: '',
-    },
     personalUrl: String,
     lightUrl: String,
     eventUrl: String,
@@ -111,15 +107,21 @@ export default {
     },
     goAccount() {
       this.$emit('goAccount');
-      window.open(`${this.personalUrl}`);
+      if (this.personalUrl) {
+        window.open(`${this.personalUrl}`);
+      }
     },
     eventeFun() {
       this.$emit('goEvente');
-      window.location.href = `${this.eventUrl}`;
+      if (this.eventUrl) {
+        window.location.href = `${this.eventUrl}`;
+      }
     },
     lightFun() {
       this.$emit('goLight');
-      window.location.href = `${this.lightUrl}`;
+      if (this.lightUrl) {
+        window.location.href = `${this.lightUrl}`;
+      }
     },
     goHome() {
       if (this.home) {
