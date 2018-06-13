@@ -1,7 +1,7 @@
-const base = process.env.GH ? '/water/' : '/'
+const base = process.env.GH ? '/header/' : '/'
 
 module.exports = {
-  title: '水滴',
+  title: '头部',
   base,
   head: [
     ['link', { rel: 'header', href: `/logo.png` }]
