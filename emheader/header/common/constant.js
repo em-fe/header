@@ -1,5 +1,5 @@
 export default {
   EVENT_USER: 'EVENT_USER',
-  EVENT_PHONE: 'EVENT_PHONE',
+  EVENT_TOKE: 'Authorization',
   SUCCESS: 10000,
 };
