@@ -1,22 +1,16 @@
-# b端头部
+# em 头部业务组件
 > 基于Vue.js 的 前端业务组件。
 
 ## 代码演示
-
-### 基本使用
 
 <br>
 <div class="header-box">
   <w-header personalUrl="https://www.baidu.com" eventUrl="http://www.qq.com/" lightUrl="http://news.qq.com/" logoutAction="http://gateway.inner.evente.cn:8000/member/org/getLoginOutCallBackUrl" @success="logoutSuccess"></w-header>
 </div>
 
-## 如何使用
-
-使用 `<w-header />` 标签声明组件，指定图标对应的 type 属性，示例代码如下:
-
-```` html
-<w-header logo="logo.png"/>
-````
+``` vue
+<w-header personalUrl="https://www.baidu.com" eventUrl="http://www.qq.com/" lightUrl="http://news.qq.com/" logoutAction="http://gateway.inner.evente.cn:8000/member/org/getLoginOutCallBackUrl" @success="logoutSuccess"></w-header>
+```
 
 ## API
 
@@ -27,10 +21,6 @@
 |logoutAction|退出登录接口地址|String|是|-|
 
 ## 方法
-
-```` html
-<w-header @goIndex="goIndex"/>
-````
 
 |事件名|说明|返回值|
 |---|------|-----|
