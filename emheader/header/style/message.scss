@@ -1,3 +1,5 @@
+@import './config.scss';
+
 .#{$prefix}message {
   &-main {
     @include box-shadow(y);
