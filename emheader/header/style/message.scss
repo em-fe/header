@@ -2,8 +2,7 @@
 
 .#{$prefix}message {
   &-main {
-    @include box-shadow(y);
-
+    box-shadow: 0 4px 8px $shadow-color;
     width: 640px;
     margin-left: -320px;
     position: absolute;
