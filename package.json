@@ -20,7 +20,8 @@
     "lint": "npm run eslint && npm run stylelint",
     "lint-staged": "lint-staged",
     "test": "jest --config jest.conf.js --no-cache --verbose",
-    "codecov": "codecov ./coverage/clover.xml"
+    "codecov": "codecov ./coverage/clover.xml",
+    "prepublishOnly": "npm run build"
   },
   "devDependencies": {
     "babel-helpers": "^6.24.1",
