@@ -24,7 +24,7 @@
 <script>
 import vue from 'vue';
 import 'em-cookie';
-import jsonp from 'em-jsonp';
+import 'em-jsonp';
 import WMask from './component/mask/index';
 import WModal from './component/modal/index';
 import WMessage from './component/message/index';

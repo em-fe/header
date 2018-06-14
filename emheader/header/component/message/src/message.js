@@ -1,11 +1,11 @@
 import Vue from 'vue';
-import EmfeMessage from './EmfeMessage.vue';
+import Message from './Message.vue';
 
-EmfeMessage.newInstance = (props = {}) => {
+Message.newInstance = (props = {}) => {
   const Instance = new Vue({
     data: props,
     render(h) {
-      return h(EmfeMessage, {
+      return h(Message, {
         props,
       });
     },
@@ -22,4 +22,4 @@ EmfeMessage.newInstance = (props = {}) => {
   };
 };
 
-export default EmfeMessage;
+export default Message;

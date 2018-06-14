@@ -1,11 +1,11 @@
 import Message from './src/message';
 
-const prefixKey = 'emfe_message_key_';
+const prefixKey = 'v_message_key_';
 
 let messageInstance;
-let delayTime = 5000;
-let style = {};
-let close = () => {};
+let delayTimeNumber = 5000;
+let styleObject = {};
+let closeFunction = () => {};
 
 function getMessageInstance() {
   messageInstance = messageInstance || Message.newInstance();
@@ -14,10 +14,10 @@ function getMessageInstance() {
 
 function notice(params) {
   const instance = getMessageInstance();
-  params.name = `${prefixKey}${name}`;
-  params.delayTime = params.delayTime || delayTime;
-  params.style = params.style || style;
-  params.close = params.close || close;
+  params.name = `${prefixKey}${params.name}`;
+  params.delayTime = params.delayTime || delayTimeNumber;
+  params.style = params.style || styleObject;
+  params.close = params.close || closeFunction;
 
   instance.notice(params);
 }
@@ -41,13 +41,13 @@ export default {
   },
   config(params) {
     if (params.delayTime) {
-      delayTime = params.delayTime;
+      delayTimeNumber = params.delayTime;
     }
     if (params.style) {
-      style = params.style;
+      styleObject = params.style;
     }
     if (params.close) {
-      close = params.close;
+      closeFunction = params.close;
     }
   },
 };
