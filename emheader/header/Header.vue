@@ -31,9 +31,9 @@ import WMessage from './component/message/index';
 import CONSTANT from './common/constant';
 import ajax from '../tools/ajax';
 
-if (!vue.prototype.$EmfeMessage) {
+if (!vue.prototype.$WMessage) {
   Object.defineProperties(vue.prototype, {
-    $EmfeMessage: {
+    $WMessage: {
       get() {
         return WMessage;
       },
@@ -94,13 +94,13 @@ export default {
             this.callbackUrl = res.data.url_list.slice();
             this.afterLogout(this.callbackUrl.length - 1);
           } else {
-            this.$EmfeMessage.error({
+            this.$WMessage.error({
               content: res.message,
             });
           }
         },
         onError: (err, response) => {
-          this.$EmfeMessage.error({
+          this.$WMessage.error({
             content: response.message,
           });
         },
@@ -151,13 +151,13 @@ export default {
               this.afterLogout(--theIndex);
             }
           } else {
-            this.$EmfeMessage.error({
+            this.$WMessage.error({
               content: '登录失败',
             });
           }
         },
         error: () => {
-          this.$EmfeMessage.error({
+          this.$WMessage.error({
             content: '登录失败',
           });
         },
