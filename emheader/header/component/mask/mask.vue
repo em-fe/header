@@ -6,7 +6,7 @@
       <div class="w-header-mask-box-modal">
         <div @click="lightFun" class="w-header-mask-box-modal-light">
           <img class="w-header-mask-box-modal-light-img" :src="lightImg">
-          <p class="w-header-mask-box-modal-light-title">轻活动</p>
+          <p class="w-header-mask-box-modal-light-title">报名活动</p>
           <p class="w-header-mask-box-modal-light-content">俱乐部、户外、会议沙龙、亲子等活动</p>
           <div class="w-header-mask-box-modal-light-mask"></div>
         </div>
