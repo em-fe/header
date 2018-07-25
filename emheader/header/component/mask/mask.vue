@@ -6,14 +6,14 @@
       <div class="w-header-mask-box-modal">
         <div @click="lightFun" class="w-header-mask-box-modal-light">
           <img class="w-header-mask-box-modal-light-img" :src="lightImg">
-          <p class="w-header-mask-box-modal-light-title">报名活动</p>
-          <p class="w-header-mask-box-modal-light-content">俱乐部、户外、会议沙龙、亲子等活动</p>
+          <p class="w-header-mask-box-modal-light-title">报名</p>
+          <p class="w-header-mask-box-modal-light-content">聚会、沙龙、排队、培训、会议、粉丝赠票、签到二维码、可审核、可付费、邀请函</p>
           <div class="w-header-mask-box-modal-light-mask"></div>
         </div>
         <div @click="eventeFun" class="w-header-mask-box-modal-light">
           <img class="w-header-mask-box-modal-light-img" :src="eventImg">
-          <p class="w-header-mask-box-modal-light-title">演出赛事</p>
-          <p class="w-header-mask-box-modal-light-content">专业的票务活动、演唱会、剧院、音乐节、赛事等</p>
+          <p class="w-header-mask-box-modal-light-title">票务</p>
+          <p class="w-header-mask-box-modal-light-content">剧场、音乐节、巡演、赛事、会议、展览、游园、多票种、多场次、选座、秒杀抢票、多种核销、代金券、年卡、外币支付</p>
           <div class="w-header-mask-box-modal-light-mask"></div>
         </div>
       </div>
