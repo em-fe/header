@@ -4,7 +4,7 @@
       <img class="w-header-eye-img" :src="logo" height="100%" @click="goHome">
     </div>
     <div class="w-header-controller">
-      <span class="w-header-controller-text">专业的活动应用平台</span>
+      <span class="w-header-controller-text">活动主办自己的系统</span>
     </div>
     <div class="w-header-info">
       <div class="w-header-index">
