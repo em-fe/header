@@ -68,7 +68,9 @@ export default {
     },
   },
   mounted() {
-    this.user = decodeURIComponent(window.$cookie.get(CONSTANT.EVENT_USER));
+    const reg = /(\d{3})\d{4}(\d{4})/;
+    this.user = decodeURIComponent(window.$cookie.get(CONSTANT.EVENT_PHONE));
+    this.user = this.user.replace(reg, '$1****$2')
   },
   methods: {
     logout() {
